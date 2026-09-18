@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email confirmed — Famly Safe</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FAFAFA;
+    --card: #ffffff;
+    --text: #0B0B0C;
+    --text-secondary: #6B6B70;
+    --accent: #0B0B0C;
+    --border: #E4E4E6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 28px;
+    text-align: center;
+  }
+  .check {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    border-radius: 20px;
+    background: #0B0B0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .check svg { width: 28px; height: 28px; }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.3px;
+  }
+  p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+  }
+  .card {
+    margin-top: 28px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  strong { color: var(--text); }
+</style>
+</head>
+<body>
+<main>
+  <div class="check">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+  </div>
+  <h1>Your email is confirmed</h1>
+  <p>You're all set — head back to the Famly Safe app and sign in.</p>
+  <div class="card">
+    You can close this page now. If the app isn't already open, look for <strong>Famly Safe</strong> on your home screen.
+  </div>
+</main>
+</body>
+</html>

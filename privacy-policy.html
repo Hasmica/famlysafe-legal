@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Famly Safe</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FAFAFA;
+    --card: #ffffff;
+    --text: #0B0B0C;
+    --text-secondary: #6B6B70;
+    --accent: #0B0B0C;
+    --border: #E4E4E6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+  .updated {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  p, li {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  a {
+    color: var(--accent);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+  strong { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Famly Safe · Last updated September 18, 2026</p>
+
+  <p>
+    This Privacy Policy explains what information Famly Safe ("the app", "we", "us")
+    collects, how it's used, and how you can have it deleted. Famly Safe is developed by an
+    individual developer; contact details are at the bottom of this page.
+  </p>
+
+  <h2>Information we collect</h2>
+
+  <p><strong>Account information.</strong> Creating an account requires:</p>
+  <ul>
+    <li>Your email address</li>
+    <li>Your password (handled and stored securely by our backend provider, Supabase — we
+      never see or store it in plain text)</li>
+  </ul>
+
+  <p><strong>Family information.</strong> Once you create or join a family, Famly Safe
+  stores whatever you and other family members choose to enter, which can include:</p>
+  <ul>
+    <li>The family's name, city, and country</li>
+    <li>Family member details: name, relationship, date of birth, city, country, living
+      status, and marital status</li>
+    <li>Assets and their ownership split between family members</li>
+    <li>Insurance policy details</li>
+    <li>Bank account nicknames and the <strong>last four digits only</strong> of an account
+      number — Famly Safe never asks for or stores a full bank account number</li>
+    <li>Documents you upload (e.g. deeds, policies, statements), and their file metadata</li>
+    <li>Reminders you create (title and due date)</li>
+  </ul>
+  <p>
+    This is the core purpose of the app: a family chooses what to record, and it's visible
+    only to that family's own members, according to the Owner/Viewer permissions each member
+    has been given.
+  </p>
+
+  <p><strong>Subscription status.</strong> If a family upgrades to Premium, we store which
+  plan is active and when it renews, so the app can unlock the right limits. This does not
+  include your payment details — see "Payments and subscriptions" below.</p>
+
+  <p><strong>Information stored on your device.</strong> Famly Safe stores your sign-in
+  session in the device's secure Keychain storage, and schedules any reminder notifications
+  you set directly with iOS itself. These notifications are entirely local to your device —
+  we do not operate a push-notification server and no reminder content is sent anywhere to
+  deliver them.</p>
+
+  <h2>How we use your information</h2>
+  <p>We use the information above solely to operate Famly Safe: to show your family's own
+  data back to the people you've shared it with, to enforce who can see and edit what, and
+  to send you the local reminders you've set. We do not use your data for advertising, we do
+  not build advertising or analytics profiles from it, and we do not sell it to anyone.
+  Famly Safe does not use AI to process, analyze, or generate anything from your data.</p>
+
+  <h2>Payments and subscriptions</h2>
+  <p>
+    Premium subscriptions are billed through Apple's App Store. Famly Safe never sees or
+    stores your payment card details — Apple handles billing directly. We use
+    <strong>RevenueCat</strong> to manage subscription status: RevenueCat and Apple receive
+    a device/account identifier and purchase event information (e.g. which plan was bought,
+    whether it's active) in order to keep your subscription in sync across devices; they do
+    not receive any of your family's actual data (family members, assets, documents, etc.).
+  </p>
+
+  <h2>How we share your information</h2>
+  <p>We don't share your personal or family information with third parties for their own
+  purposes. The only parties involved in processing it are:</p>
+  <ul>
+    <li><strong>Supabase</strong>, our backend infrastructure provider — hosts our database,
+      file storage, and authentication on our behalf, under its own security and privacy
+      commitments.</li>
+    <li><strong>RevenueCat and Apple</strong> — process Premium subscription purchases and
+      billing, as described above.</li>
+  </ul>
+
+  <h2>Data security</h2>
+  <p>Every family's data is isolated by row-level security in our database: a family's
+  information is only ever readable by that family's own members, and only according to
+  each member's Owner or Viewer permission. Uploaded documents are stored in access-
+  controlled cloud storage, not embedded in the database directly. All network traffic
+  between the app and our backend is encrypted (HTTPS/TLS).</p>
+
+  <h2>Data retention &amp; deletion</h2>
+  <p>We retain your data for as long as your account exists. You can permanently delete your
+  account and its data at any time, directly in the app — see our
+  <a href="data-deletion.html">Data Deletion Instructions</a> for how.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Famly Safe is intended for use by adults managing their family's information, and we do
+  not knowingly allow anyone under 13 to create an account. A family's records may include
+  information about a minor family member (for example, a child's name or date of birth)
+  entered by a parent or guardian who uses the app — this information is protected by the
+  same access controls as everything else in that family. If you believe a child has created
+  their own account or provided us with personal information directly, contact us using the
+  details below and we'll delete it.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we'll update the date at the top of this page. Continued use of
+  Famly Safe after a change means you accept the updated policy.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">Contact us</h2>
+    <p style="margin-bottom:0">
+      Questions about this policy, or about your data? Email
+      <a href="mailto:hasmicasekar@gmail.com">hasmicasekar@gmail.com</a>.
+    </p>
+  </div>
+
+  <footer>Famly Safe — Privacy Policy</footer>
+</main>
+</body>
+</html>

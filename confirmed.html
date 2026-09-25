@@ -65,20 +65,37 @@
     color: var(--text-secondary);
   }
   strong { color: var(--text); }
+  .icon.error { background: #B00020; }
 </style>
 </head>
 <body>
 <main>
-  <div class="check">
+  <div id="icon" class="check">
     <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M5 13l4 4L19 7" />
     </svg>
   </div>
-  <h1>Your email is confirmed</h1>
-  <p>You're all set — head back to the Famly Safe app and sign in.</p>
+  <h1 id="title">Your email is confirmed</h1>
+  <p id="message">You're all set — head back to the Famly Safe app and sign in.</p>
   <div class="card">
-    You can close this page now. If the app isn't already open, look for <strong>Famly Safe</strong> on your home screen.
+    <span id="card-text">You can close this page now. If the app isn't already open, look for <strong>Famly Safe</strong> on your home screen.</span>
   </div>
 </main>
+<script>
+  // Supabase's own verify redirect appends #error=...&error_code=...
+  // when the token was already used or has expired — this page used to
+  // ignore that and always show "confirmed", which is misleading when
+  // the link actually failed server-side.
+  var params = new URLSearchParams(location.hash.replace(/^#/, '') || location.search);
+  if (params.get('error') || params.get('error_code')) {
+    document.getElementById('icon').classList.add('error');
+    document.getElementById('icon').innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12" /></svg>';
+    document.getElementById('title').textContent = 'This link has expired';
+    document.getElementById('message').textContent = "It's already been used or is too old to work.";
+    document.getElementById('card-text').innerHTML =
+      'Go back to <strong>Famly Safe</strong>, try signing in, and use "Resend confirmation email" to get a new link.';
+  }
+</script>
 </body>
 </html>
